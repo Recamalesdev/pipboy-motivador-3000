@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>PipBoy Motivador 3000</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!--<audio id="audioRetro" src="assets/retro.mp3" controls loop></audio> -->
+
+  <div class="menu-pipboy">
+    <span>STAT</span>
+    <span>INV</span>
+    <span>DATA</span>
+    <span>MAP</span>
+    <span>RADIO</span>
+  </div>
+
+  <div class="container">
+    <h1 class="titulo">Bienvenido, habitante del Refugio</h1>
+    
+    <div id="relojRetro">
+      <p id="hora"></p>
+      <p id="fecha"></p>
+    </div>
+
+    <div id="clima" class="clima">
+      <img id="iconoClima" src="" alt="icono clima" />
+      <p id="descripcionClima"></p>
+    </div>
+
+    <img id="imagenFallout" src="assets/imagenes/fallout25.png" alt="fallout imagen" class="imagenFallout" />
+    <p class="frase" id="frase">"Prepárate, porque vas a cambiar tu mundo."</p>
+    <button onclick="mostrarFrase()">Nueva frase</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

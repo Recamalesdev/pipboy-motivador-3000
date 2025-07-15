@@ -1,0 +1,177 @@
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #001900;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu-pipboy {
+  width: 100%;
+  background-color: #003300;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-weight: bold;
+  border-bottom: 2px solid #00ff00;
+}
+
+.menu-pipboy span {
+  font-size: 1.8rem;
+  margin: 0 20px;
+  cursor: pointer;
+  color: #00ff00;
+}
+
+.container {
+  margin-top: 40px;
+  padding: 30px;
+  border: 3px solid #00ff00;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ff00;
+  text-align: center;
+  background-color: #000d00;
+}
+
+.vaultboy {
+  width: 120px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.frase {
+  font-size: 2.8rem;
+  min-height: 3rem;
+  margin: 15px 0;
+  text-align: center;
+  color: #00ff00;
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 15px #00ff00;
+  animation: brillar 2s infinite alternate;
+  font-family: 'Courier New', monospace;
+  opacity: 0.95;
+  transition: opacity 0.6s ease-in-out;
+}
+
+
+button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  font-family: monospace;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #003300;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes brillar {
+  0% {
+    text-shadow:
+      0 0 5px #00ff00,
+      0 0 10px #00ff00,
+      0 0 15px #00ff00;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #00ff00,
+      0 0 20px #00ff00,
+      0 0 30px #00ff00;
+  }
+}
+
+
+
+#relojRetro {
+  margin: 20px 0;
+  color: #00FF00;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  
+}
+
+#hora {
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 0 0 5px #00FF00;
+}
+
+#fecha {
+  font-size: 38px;
+  margin-top: 10px;
+  color: #00FF00;
+  opacity: 0.8;
+}
+
+#clima {
+  margin-top: 10px;
+  color: #00FF00;
+  font-family: 'Courier New', monospace;
+  font-size: 35px;
+  text-align: center;
+  opacity: 0.85;
+}
+
+
+#iconoClima {
+  width: 64px;
+  height: 64px;
+  animation: flotando 3s infinite ease-in-out;
+  margin-bottom: 5px;
+}
+
+/* Animación retro flotante */
+@keyframes flotando {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+
+.imagenFallout {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.imagenFallout:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ff00;
+}
+
+
+
