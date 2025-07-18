@@ -1,177 +1,209 @@
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* =====================================
+   0) OCULTAR CURSOR
+   ===================================== */
+html, body {
+  cursor: none !important;
+}
+
+
+
+/* –––––––––– Estilos Globales –––––––––– */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
   background-color: #001900;
   color: #00ff00;
   font-family: 'Courier New', monospace;
+  /* Contenedor único centrado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* –––––––––– Contenedor Principal –––––––––– */
+.contenedor {
+  position: relative;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  /* fija el menú arriba y reparte el resto */
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  padding: 4px;
+  background-color: #000d00;
+  border: 3px solid #00ff00;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #00ff00;
   overflow: hidden;
 }
 
+/* –––––––––– Menú Superior –––––––––– */
 .menu-pipboy {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   background-color: #003300;
   display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  font-weight: bold;
+  justify-content: space-around;
   border-bottom: 2px solid #00ff00;
+  padding: 6px 0;
+  z-index: 10;
 }
 
 .menu-pipboy span {
-  font-size: 1.8rem;
-  margin: 0 20px;
-  cursor: pointer;
-  color: #00ff00;
-}
-
-.container {
-  margin-top: 40px;
-  padding: 30px;
-  border: 3px solid #00ff00;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #00ff00;
+  flex: 1;
   text-align: center;
-  background-color: #000d00;
+  font-size: 1.8rem;
+  padding: 0.4rem 1rem;
+  letter-spacing: 1px;
 }
 
-.vaultboy {
-  width: 120px;
-  margin: 20px 0;
-  border-radius: 5px;
-}
-
+/* –––––––––– Título –––––––––– */
 .titulo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  margin-top: 80px;   /* deja espacio para el menú */
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;  
 }
 
-.frase {
-  font-size: 2.8rem;
-  min-height: 3rem;
-  margin: 15px 0;
+/* –––––––––– Reloj y Fecha –––––––––– */
+#relojRetro {
   text-align: center;
-  color: #00ff00;
+}
+
+#hora {
+  font-size: 4.5rem;
+  text-shadow: 0 0 6px #00ff00;
+  margin-bottom: 0.6rem; 
+}
+
+#fecha {
+  font-size: 3.2rem;
+  opacity: 0.8;
+  margin-top: 4px;
+  margin-bottom: 1.2rem; 
+}
+
+/* –––––––––– Clima –––––––––– */
+#clima {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 3.2rem;
+  margin-bottom: 1.4rem; 
+}
+
+#iconoClima {
+  width: 100px;
+  height: 100px;
+  animation: flotando 3s infinite ease-in-out;
+  margin-bottom: 4px;
+}
+
+/* –––––––––– Imagen Fallout –––––––––– */
+.imagenFallout {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  margin: 12px 0;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  border-radius: 6px;
+  margin-bottom: 1.6rem; 
+}
+
+/* –––––––––– Frase Motivadora –––––––––– */
+.frase {
+  font-size: 3.8rem;
+  text-align: center;
+  margin-bottom: 20px 0 40px;
   text-shadow:
     0 0 5px #00ff00,
-    0 0 10px #00ff00,
-    0 0 15px #00ff00;
+    0 0 12px #00ff00;
   animation: brillar 2s infinite alternate;
-  font-family: 'Courier New', monospace;
-  opacity: 0.95;
-  transition: opacity 0.6s ease-in-out;
+  line-height: 1.3;
+  width: 90%;
 }
 
-
-button {
-  padding: 10px 20px;
-  background-color: transparent;
-  border: 2px solid #00ff00;
+/* –––––––––– Botón –––––––––– */
+/*.boton {
+  font-size: 1.2rem;
+  padding: 6px 14px;
+  background: transparent;
   color: #00ff00;
-  font-family: monospace;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-bottom: 16px;
+   margin-top: 1.2rem;
 }
-
-button:hover {
+.boton:hover {
   background-color: #003300;
-}
+}*/
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+/* –––––––––– Animaciones –––––––––– */
+@keyframes flotando {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes brillar {
   0% {
-    text-shadow:
-      0 0 5px #00ff00,
-      0 0 10px #00ff00,
-      0 0 15px #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 12px #00ff00;
   }
   100% {
-    text-shadow:
-      0 0 10px #00ff00,
-      0 0 20px #00ff00,
-      0 0 30px #00ff00;
+    text-shadow: 0 0 12px #00ff00, 0 0 20px #00ff00;
   }
 }
 
 
-
-#relojRetro {
-  margin: 20px 0;
-  color: #00FF00;
-  font-family: 'Courier New', monospace;
-  text-align: center;
-  
+.contenedor {
+  position: relative; /* ya lo tenías */
 }
 
-#hora {
-  font-size: 64px;
-  font-weight: bold;
-  letter-spacing: 4px;
-  text-shadow: 0 0 5px #00FF00;
+/* Nombre de la izquierda */
+.contenedor::before {
+  content: "LUCÍA";
+  position: absolute;
+  left: 350px;        /* separación del borde izquierdo */
+  top: 50%;          /* centro vertical */
+  transform: translateY(-50%); /* ajustar al centro exacto */
+  font-size: 2.0rem;      /* más grande */
+  letter-spacing: 3px;
+  color: #00ff00;
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00;
+  font-family: 'Press Start 2P', monospace;
+  opacity: 0.9;
+  pointer-events: none;   /* para que no capte clicks */
 }
 
-#fecha {
-  font-size: 38px;
-  margin-top: 10px;
-  color: #00FF00;
-  opacity: 0.8;
+/* Nombre de la derecha */
+.contenedor::after {
+  content: "LAURA";
+  position: absolute;
+  right: 350px;       /* separación del borde derecho */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.0rem;
+  letter-spacing: 3px;
+  color: #00ff00;
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00;
+  font-family: 'Press Start 2P', monospace;
+  opacity: 0.9;
+  pointer-events: none;
 }
-
-#clima {
-  margin-top: 10px;
-  color: #00FF00;
-  font-family: 'Courier New', monospace;
-  font-size: 35px;
-  text-align: center;
-  opacity: 0.85;
-}
-
-
-#iconoClima {
-  width: 64px;
-  height: 64px;
-  animation: flotando 3s infinite ease-in-out;
-  margin-bottom: 5px;
-}
-
-/* Animación retro flotante */
-@keyframes flotando {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
-}
-
-
-.imagenFallout {
-  max-width: 60%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border: 2px solid #00ff00;
-  box-shadow: 0 0 10px #00ff00;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.imagenFallout:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ff00;
-}
-
-
-
