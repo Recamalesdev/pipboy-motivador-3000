@@ -16,7 +16,7 @@
 
 1. Se arranca en modo kiosko desde la Raspberry Pi.
 2. Muestra una frase aleatoria en pantalla.
-3. Próximamente: reloj digital, estado del día, menú interactivo y más.
+3. Reloj digital, estado del día, menú interactivo y más.
 
 ## Capturas
 
