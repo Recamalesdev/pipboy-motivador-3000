@@ -20,8 +20,6 @@
 
 ## Capturas
 
-🔧 *(Aquí puedes añadir más adelante una imagen del sistema funcionando en la TV)*
 
----
 
 Hecho con 💚 por [@Recamalesdev](https://github.com/Recamalesdev)
